@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | GoldenEgg</title>
+    <title>Unity WebGL Player | BaseBallOfBrain</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -22,20 +22,20 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">GoldenEgg</div>
+        <div id="unity-build-title">BaseBallOfBrain</div>
       </div>
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/testBuild.loader.js";
+      var loaderUrl = buildUrl + "/Web.loader.js";
       var config = {
-        dataUrl: buildUrl + "/testBuild.data.unityweb",
-        frameworkUrl: buildUrl + "/testBuild.framework.js.unityweb",
-        codeUrl: buildUrl + "/testBuild.wasm.unityweb",
+        dataUrl: buildUrl + "/Web.data.unityweb",
+        frameworkUrl: buildUrl + "/Web.framework.js.unityweb",
+        codeUrl: buildUrl + "/Web.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "maccomgames",
-        productName: "GoldenEgg",
-        productVersion: "1.0.2",
+        companyName: "DefaultCompany",
+        productName: "BaseBallOfBrain",
+        productVersion: "0.1",
       };
 
       var container = document.querySelector("#unity-container");
@@ -53,10 +53,9 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "720px";
-        canvas.style.height = "1280px";
+        canvas.style.width = "1920px";
+        canvas.style.height = "1080px";
       }
-      canvas.style.background = "url('" + buildUrl + "/testBuild.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
